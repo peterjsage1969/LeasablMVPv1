@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "touch_points",
+  "info": {
+    "name": "Touch_Points"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "scannerName": {
+      "type": "string"
+    },
+    "scannerId": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "location": {
+      "model": "locations",
+      "via": "touch_points"
+    }
+  }
+}

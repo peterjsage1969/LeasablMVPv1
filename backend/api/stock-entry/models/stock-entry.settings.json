@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stock_entries",
+  "info": {
+    "name": "Stock_Entry"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Quantity": {
+      "type": "integer"
+    },
+    "stockType": {
+      "type": "enumeration",
+      "enum": [
+        "NewIns",
+        "WriteOffs",
+        "MadeLive",
+        "EntryError"
+      ]
+    },
+    "dateTime": {
+      "type": "datetime",
+      "required": true
+    }
+  }
+}

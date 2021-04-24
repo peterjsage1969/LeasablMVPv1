@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skus",
+  "info": {
+    "name": "Sku"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "featuredImage": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "skuId": {
+      "type": "uid"
+    },
+    "skuStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Blank",
+        "Smart",
+        "Live"
+      ]
+    },
+    "category": {
+      "model": "category"
+    }
+  }
+}

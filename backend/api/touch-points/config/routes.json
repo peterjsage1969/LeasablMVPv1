@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/touch-points",
+      "handler": "touch-points.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/touch-points/count",
+      "handler": "touch-points.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/touch-points/:id",
+      "handler": "touch-points.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/touch-points",
+      "handler": "touch-points.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/touch-points/:id",
+      "handler": "touch-points.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/touch-points/:id",
+      "handler": "touch-points.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

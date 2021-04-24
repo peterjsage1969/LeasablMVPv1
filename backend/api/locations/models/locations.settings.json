@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "locations",
+  "info": {
+    "name": "Locations",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "LocationType": {
+      "type": "enumeration",
+      "enum": [
+        "store",
+        "warehouse",
+        "other"
+      ]
+    },
+    "address": {
+      "type": "text"
+    },
+    "acceptReturns": {
+      "type": "boolean"
+    },
+    "featuredImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "touch_points": {
+      "via": "location",
+      "collection": "touch-points"
+    }
+  }
+}

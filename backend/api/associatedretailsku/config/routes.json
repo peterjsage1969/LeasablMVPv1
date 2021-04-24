@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/associatedretailskus",
+      "handler": "associatedretailsku.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/associatedretailskus/count",
+      "handler": "associatedretailsku.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/associatedretailskus/:id",
+      "handler": "associatedretailsku.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/associatedretailskus",
+      "handler": "associatedretailsku.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/associatedretailskus/:id",
+      "handler": "associatedretailsku.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/associatedretailskus/:id",
+      "handler": "associatedretailsku.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
